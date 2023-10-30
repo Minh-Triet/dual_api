@@ -6,10 +6,12 @@ spec:
   selector:
     app: my-api
   ports:
-    - protocol: TCP
+    - name: api1-port
+      protocol: TCP
       port: 80
       targetPort: 5000
-    - protocol: TCP
+    - name: api2-port
+      protocol: TCP
       port: 8080
       targetPort: 8000
   type: ClusterIP
