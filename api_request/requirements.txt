@@ -1,0 +1,15 @@
+Flask
+Flask-HTTPAuth
+Flask-Migrate
+Flask-RESTful
+loguru
+python-dotenv
+requests
+numpy
+python-dateutil~=2.8.2
+alembic
+Werkzeug
+xmltodict~=0.13.0
+Flask-WTF
+gunicorn
+eventlet
