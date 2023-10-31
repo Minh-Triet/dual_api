@@ -1,5 +1,5 @@
 from api_scheduler.collect_db import generate_data
-from api_scheduler.development_config import scheduler
+from development_config import scheduler
 
 
 def create_apscheduler():
