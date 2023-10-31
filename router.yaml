@@ -1,10 +1,18 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: my-app
+  name: dual-port-route
 spec:
+  port:
+    targetPort: 5000
+  alternateBackends:
+    - kind: Service
+      name: my-service
+      port:
+        targetPort: 8080
   to:
     kind: Service
-    name: my-app
-  port:
-    targetPort: 8000
+    name: my-service
+  tls:
+    termination: edge
+  wildcardPolicy: None
