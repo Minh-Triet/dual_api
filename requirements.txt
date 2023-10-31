@@ -1,0 +1,26 @@
+Flask
+Flask-HTTPAuth
+Flask-Migrate
+Flask-RESTful
+Flask-SQLAlchemy
+loguru
+pymssql
+python-dotenv
+requests
+pandas
+SQLAlchemy
+numpy
+python-dateutil~=2.8.2
+alembic
+Werkzeug
+xmltodict~=0.13.0
+APScheduler
+WTForms~=3.0.1
+Flask-WTF
+mysql
+pyodbc
+beautifulsoup4~=4.12.2
+flask-socketio
+# simple-websocket
+gunicorn
+eventlet
