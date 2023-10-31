@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-api-container
-          image: dual_api
+          image: dual-api
           ports:
             - containerPort: 5000
             - containerPort: 8000
