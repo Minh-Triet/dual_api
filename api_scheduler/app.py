@@ -8,8 +8,9 @@ from flask import Flask, render_template
 from flask_restful import Api
 from loguru import logger
 
+from api_scheduler.model.apscheduler import create_apscheduler
 from development_config import check_scheduler
-from model.apscheduler import create_apscheduler
+
 
 thread = None
 generating_data = False
