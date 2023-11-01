@@ -18,7 +18,7 @@ connected = []
 
 def create_app():
     _app_ = Flask(__name__)
-    load_dotenv('.env', verbose=True)
+    load_dotenv('../.env', verbose=True)
     _app_.config.from_object('development_config')  # load default configs from development_config.py
     _app_.config.from_envvar(
         'APPLICATION_SETTING')  # override with config.py (APPLICATION_SETTINGS points to config.py)

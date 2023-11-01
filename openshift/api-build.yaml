@@ -1,0 +1,22 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: flask-api-build
+spec:
+  source:
+    contextDir: api/
+    git:
+      uri: https://github.com/Minh-Triet/dual_api.git
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: python:3.8
+        namespace: openshift
+  output:
+    to:
+      kind: ImageStreamTag
+      name: flask-api:latest
+  triggers:
+    - type: ConfigChange

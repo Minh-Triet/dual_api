@@ -1,1 +1,0 @@
-exec gunicorn --bind 0.0.0.0:5000 -w 4 --worker-class eventlet --worker-connections 100 app_api:app --timeout 60 --log-level debug
