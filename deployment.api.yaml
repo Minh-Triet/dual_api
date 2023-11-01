@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: flask-api
-        image: <image_registry>/flask-api
+        image: sha256:d60652f640d183d49274b4ffcdbd2daccea987374a36d89e88078e9601503479/flask-api
         ports:
         - containerPort: 5000
 ---
