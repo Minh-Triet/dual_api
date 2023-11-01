@@ -14,3 +14,5 @@ spec:
       containers:
         - name: flask-scheduler
           image: flask-scheduler:latest
+          ports:
+            - containerPort: 8080

@@ -8,12 +8,12 @@ spec:
     git:
       uri: https://github.com/Minh-Triet/dual_api.git
   strategy:
-    type: Source
-    sourceStrategy:
+    type: Docker
+    dockerStrategy:
       from:
-        kind: ImageStreamTag
+        kind: DockerImage
         name: python:3.8
-        namespace: openshift
+      dockerfilePath: Dockerfile
   output:
     to:
       kind: ImageStreamTag
