@@ -1,0 +1,13 @@
+FROM registry.redhat.io/ubi9/python-39@sha256:40a58935b9c22664927b22bf256f53a3d744ddb7316f3af18061099e199526ee
+
+COPY . /app
+WORKDIR /app
+EXPOSE 5000
+USER 0
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
+
+COPY docker-shceduler.sh /docker-shceduler.sh
+RUN chmod +x /docker-shceduler.sh
+
+CMD ["/docker-shceduler.sh"]

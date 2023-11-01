@@ -1,4 +1,4 @@
-from api_scheduler.collect_db import generate_data
+from collect_db import generate_data
 from development_config import scheduler
 
 
