@@ -22,3 +22,15 @@ spec:
   triggers:
     - type: ConfigChange
   runPolicy: Serial
+
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStreamTag
+metadata:
+  name: flask-scheduler:latest
+spec:
+  referencePolicy:
+    type: Source
+  from:
+    kind: ImageStreamImage
+    name: flask-scheduler:latest
