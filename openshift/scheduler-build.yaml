@@ -13,9 +13,6 @@ spec:
       from:
         kind: DockerImage
         name: python:3.8
-      env:
-        - name: APP_ROOT
-          value: scheduler
       dockerfilePath: Dockerfile
   output:
     to:
