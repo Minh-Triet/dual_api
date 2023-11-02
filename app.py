@@ -1,7 +1,7 @@
 import os
 
 from dotenv import load_dotenv
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_restful import Api
 
 
@@ -18,6 +18,15 @@ def create_app():
     @_app_.route('/')
     def home():
         return render_template('index.html'), 200
+
+    @_app_.route('/api', methods=['GET', 'POST'])
+    def api():
+        if request.method == 'GET':
+            # Xử lý request GET
+            return 'GET request received'
+        elif request.method == 'POST':
+            # Xử lý request POST
+            return 'POST request received'
 
     return _app_
 

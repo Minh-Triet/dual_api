@@ -18,6 +18,18 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'flask-api:latest'
+      name: flask-api:latest
   triggers:
     - type: ConfigChange
+
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStreamTag
+metadata:
+  name: flask-api:latest
+spec:
+  referencePolicy:
+    type: Source
+  from:
+    kind: ImageStreamImage
+    name: flask-api:latest
