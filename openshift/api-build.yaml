@@ -1,7 +1,7 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: flask-api-pod1-build-config
+  name: flask-api-build
 spec:
   source:
     contextDir: api/
@@ -10,7 +10,7 @@ spec:
     type: Git
   strategy:
     type: Docker
-    sourceStrategy:
+    dockerStrategy:
       from:
         kind: DockerImage
         name: python:3.9
