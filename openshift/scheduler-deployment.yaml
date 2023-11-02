@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: flask-scheduler
-          image: flask-scheduler:latest
+          image: image-registry.openshift-image-registry.svc:5000/minh-triet-dev/flask-scheduler:latest
           ports:
             - containerPort: 8080
 ---
@@ -41,4 +41,4 @@ spec:
     kind: Service
     name: flask-scheduler-service
   port:
-    targetPort: 80
+    targetPort: 8080
