@@ -5,7 +5,7 @@ FROM  registry.redhat.io/ubi9/python-39@sha256:40a58935b9c22664927b22bf256f53a3d
 WORKDIR /app
 
 # Copy các file cần thiết vào container
-COPY /DualAPI /app
+COPY ./ /app
 
 # Cài đặt các dependencies
 RUN /opt/app-root/bin/python3.9 -m pip install --upgrade pip
