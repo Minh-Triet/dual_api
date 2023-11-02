@@ -9,7 +9,7 @@ spec:
       uri: https://github.com/Minh-Triet/dual_api.git
     type: Git
   strategy:
-    type: Source
+    type: Docker
     sourceStrategy:
       from:
         kind: DockerImage
