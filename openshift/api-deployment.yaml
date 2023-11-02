@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: flask-api
-          image: image-registry.openshift-image-registry.svc:5000/minh-triet-dev/app-api@sha256:7083e875723f049d2e3780a98fa868d418205eb29c8767beadedbec011d08924
+          image: image-registry.openshift-image-registry.svc:5000/minh-triet-dev/app-api@sha256:1c2dae0826e009cfb730ef8607e32b364849ff919158f80fad334aff676b2c79
           ports:
             - containerPort: 5000
 ---
