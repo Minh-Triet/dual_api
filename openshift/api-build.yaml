@@ -6,7 +6,7 @@ metadata:
     BuildConfig: flask-api-build
 spec:
   source:
-    contextDir: api/
+    contextDir: /
     git:
       uri: https://github.com/Minh-Triet/dual_api.git
     type: Git
