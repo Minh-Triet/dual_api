@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, render_template, request
 from flask_restful import Api
+from loguru import logger
 
 
 def create_app():
@@ -23,9 +24,11 @@ def create_app():
     def api():
         if request.method == 'GET':
             # Xử lý request GET
+            logger.debug('GET request received')
             return 'GET request received'
         elif request.method == 'POST':
             # Xử lý request POST
+            logger.debug('GET request received')
             return 'POST request received'
 
     return _app_
