@@ -8,6 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Cài đặt các dependencies
+RUN /opt/app-root/bin/python3.9 -m pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port
@@ -17,4 +18,4 @@ ENV PORT=8080
 ENV WORKERS=1
 
 # Chạy ứng dụng bằng Gunicorn
-CMD gunicorn --bind 0.0.0.0:$PORT --workers $WORKERS scheduler.scheduler:app
+CMD gunicorn --bind 0.0.0.0:$PORT --workers $WORKERS scheduler:app
