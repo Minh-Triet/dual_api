@@ -18,7 +18,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'flask-scheduler:latest'
+      name: flask-scheduler:latest
   triggers:
     - type: ConfigChange
   runPolicy: Serial
