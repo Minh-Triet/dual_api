@@ -10,13 +10,10 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
-      from:
-        kind: DockerImage
-        name: python:3.8
       dockerfilePath: Dockerfile
   output:
     to:
       kind: ImageStreamTag
-      name: flask-scheduler:latest
+      name: 'flask-scheduler:latest'
   triggers:
     - type: ConfigChange

@@ -11,14 +11,11 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
-      from:
-        kind: DockerImage
-        name: python:3.9
       dockerfilePath: Dockerfile
       forcePull: true
   output:
     to:
       kind: ImageStreamTag
-      name: flask-api:latest
+      name: 'flask-api:latest'
   triggers:
     - type: ConfigChange
