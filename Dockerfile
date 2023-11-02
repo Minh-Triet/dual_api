@@ -1,6 +1,6 @@
 # Sử dụng base image Python
-#FROM  registry.redhat.io/ubi9/python-39@sha256:40a58935b9c22664927b22bf256f53a3d744ddb7316f3af18061099e199526ee
-FROM python:3.8
+FROM  registry.redhat.io/ubi9/python-39@sha256:40a58935b9c22664927b22bf256f53a3d744ddb7316f3af18061099e199526ee
+#FROM python:3.8
 # Thiết lập đường dẫn làm việc
 WORKDIR /app
 
