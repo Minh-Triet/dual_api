@@ -5,8 +5,7 @@ FROM python:3.8
 WORKDIR /app
 
 # Copy các file cần thiết vào container
-COPY requirements.txt .
-COPY app.py .
+COPY . /app
 
 # Cài đặt các dependencies
 RUN pip install --no-cache-dir -r requirements.txt
