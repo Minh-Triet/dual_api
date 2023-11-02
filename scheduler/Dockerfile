@@ -11,5 +11,11 @@ COPY scheduler.py .
 # Cài đặt các dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Chạy Flask scheduler
-CMD ["python", "scheduler.py"]
+# Expose port
+EXPOSE 8080
+# Chạy Flask API
+ENV PORT=8080
+ENV WORKERS=1
+
+# Chạy ứng dụng bằng Gunicorn
+CMD gunicorn --bind 0.0.0.0:$PORT --workers $WORKERS scheduler.scheduler:app

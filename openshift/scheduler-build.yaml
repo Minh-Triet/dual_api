@@ -8,11 +8,14 @@ spec:
     git:
       uri: https://github.com/Minh-Triet/dual_api.git
   strategy:
-    type: Docker
+    type: Source
     dockerStrategy:
       from:
         kind: DockerImage
         name: python:3.8
+      env:
+        - name: APP_ROOT
+          value: scheduler
       dockerfilePath: Dockerfile
   output:
     to:

@@ -15,4 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Chạy Flask API
-CMD ["python", "app.py"]
+ENV PORT=5000
+ENV WORKERS=4
+
+# Chạy ứng dụng bằng Gunicorn
+CMD gunicorn --bind 0.0.0.0:$PORT --workers $WORKERS api.app:app
