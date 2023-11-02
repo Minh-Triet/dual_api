@@ -2,6 +2,8 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   name: flask-api-build
+  labels:
+    BuildConfig: flask-api-build
 spec:
   source:
     contextDir: api/

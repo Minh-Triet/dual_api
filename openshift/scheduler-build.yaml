@@ -2,18 +2,23 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   name: flask-scheduler-build
+  labels:
+    BuildConfig: flask-scheduler-build
 spec:
   source:
     contextDir: scheduler/
     git:
       uri: https://github.com/Minh-Triet/dual_api.git
+    type: Git
   strategy:
     type: Docker
     dockerStrategy:
       dockerfilePath: Dockerfile
+      forcePull: true
   output:
     to:
       kind: ImageStreamTag
       name: 'flask-scheduler:latest'
   triggers:
     - type: ConfigChange
+  runPolicy: Serial
